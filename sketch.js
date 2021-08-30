@@ -16,10 +16,21 @@ function setup() {
   world = engine.world;
 	
    //Create Player Base and Computer Base Object
-  playerBase = new PlayerBase(300,random(450,height-350),180,150);
-  player = new Player(285,playerBase.body.Bodies.position.y-153,50,180);
-  computerplayerBase = new ComputerBase(600,random(450,height-350),180,150);
-  computerplayer = new ComputerPlayer(570,playerBase.body.Bodies.position.y-153,50,180);
+   playerBase = new PlayerBase(100, random(450, height - 300), 180, 150);
+  player = new Player(145, playerBase.body.position.y - 153, 50, 180);
+  
+  computerplayerBase = new ComputerBase(
+    width - 300,
+    random(450, height - 300),
+    180,
+    150
+  );
+  computerplayer = new ComputerPlayer(
+    width - 280,
+    computerplayerBase.body.position.y - 153,
+    50,
+    180
+  );
  }
 
 function draw() {
